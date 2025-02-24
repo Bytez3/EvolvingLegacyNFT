@@ -1,0 +1,30 @@
+{
+  "name": "Evolving Legacy NFT #0",
+  "description": "Level 1 Evolving Legacy NFT - A unique NFT that evolves through staking",
+  "image": "https://your-image-host.com/images/0_1.png",
+  "attributes": [
+    {
+      "trait_type": "Level",
+      "value": 1,
+      "max_value": 10
+    },
+    {
+      "trait_type": "Evolution Stage",
+      "value": "Seedling"
+    },
+    {
+      "trait_type": "Staking Status",
+      "value": false
+    },
+    {
+      "trait_type": "Time to Next Level",
+      "value": "7 days"
+    },
+    {
+      "display_type": "boost_percentage",
+      "trait_type": "Evolution Progress",
+      "value": 0
+    }
+  ],
+  "animation_url": "https://your-image-host.com/animations/0_1.mp4"
+} 
