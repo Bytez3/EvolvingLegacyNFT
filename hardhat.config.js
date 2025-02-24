@@ -21,12 +21,22 @@ module.exports = {
     "base-goerli": {
       url: BASE_GOERLI_RPC_URL,
       accounts: [PRIVATE_KEY],
-      chainId: 84531
+      chainId: 84531,
+      verify: {
+        etherscan: {
+          apiUrl: "https://api-goerli.basescan.org"
+        }
+      }
     },
     "base-mainnet": {
       url: BASE_MAINNET_RPC_URL,
       accounts: [PRIVATE_KEY],
-      chainId: 8453
+      chainId: 8453,
+      verify: {
+        etherscan: {
+          apiUrl: "https://api.basescan.org"
+        }
+      }
     }
   },
   etherscan: {
@@ -52,5 +62,10 @@ module.exports = {
         }
       }
     ]
+  },
+  gasReporter: {
+    enabled: true,
+    currency: "USD",
+    coinmarketcap: process.env.COINMARKETCAP_API_KEY
   }
 }; 

@@ -15,6 +15,14 @@ async function main() {
   console.log("Waiting for block confirmations...");
   await nft.deploymentTransaction().wait(5);
 
+  // Set initial base URI if provided in environment
+  const baseURI = process.env.METADATA_BASE_URI;
+  if (baseURI) {
+    console.log("Setting base URI...");
+    await nft.setBaseURI(baseURI);
+    console.log("Base URI set to:", baseURI);
+  }
+
   // Verify the contract
   console.log("Verifying contract...");
   try {
